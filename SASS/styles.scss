@@ -1,0 +1,89 @@
+@import "couleur";
+@import "police";
+@import "card";
+@import "autres";
+
+// General
+body {
+    margin: 0;
+    font-family: $texte;
+}
+
+//HEADER ET NAV 
+
+.all-header {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    .logo {
+        margin-top: 3%;
+        margin-bottom: 3%;
+        width: 50%;
+        margin-left: 27%;
+    }
+}
+
+.nav-logo {
+    display: $display-settings;
+    flex-direction: $flex-vertical;
+    align-items: center;   
+    box-shadow:0 -5px 10px rgba(0, 0, 0, 0.1), $ombre;
+    background-color: $couleur_localisation ;
+    .localisation {
+        display: $display-settings; 
+        .fa-solid.fa-location-dot {
+            font-size: 20px;
+            margin-top: 12%;
+            font-size: 22px;
+            padding-right: 20px;
+            color: #353535;
+        }
+    }
+}
+
+.ville-localisation {
+    font-weight: $texte_gras;
+    color: #353535;
+    font-size: 22px;
+}
+
+.introduction {
+    display: $display-settings;
+    flex-direction: $flex-vertical;
+    background-color: $couleur_menu;
+    text-align: center; 
+    .sous-titre1 {
+        font-weight: $texte_gras;
+        font-size: $fontsize_titre;
+        width: 60%;
+        margin-left: 22%;
+    }
+}
+
+.sous-titre2 {
+    font-size: $fontsize_descrip;
+    width: 75%;
+    margin-left: 17%;
+    color: #353535;
+    font-weight: 100;
+    margin-top: 0;
+}
+
+.button-explorerR {
+    background: $couleur_boutton;
+    color: white;
+    margin:35px 5px;
+    padding: 20px 20px; 
+    width: 50%;
+    font-size: 3vw;
+    border-radius: 50px;
+    font-weight: $texte_gras;
+    margin-bottom: 60px;
+    margin-left: 29%;
+    border: $sans_bordure;
+    box-shadow: $ombre;
+}
+
+
+
+
+
+

@@ -1,0 +1,85 @@
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.all-header {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+.all-header .logo {
+  margin-top: 3%;
+  margin-bottom: 3%;
+  width: 50%;
+  margin-left: 27%;
+}
+
+.nav-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.1), 0 5px 10px rgba(0, 0, 0, 0.3);
+  background-color: #eaeaea;
+}
+.nav-logo .localisation {
+  display: flex;
+}
+.nav-logo .localisation .fa-solid.fa-location-dot {
+  font-size: 20px;
+  margin-top: 12%;
+  font-size: 22px;
+  padding-right: 20px;
+  color: #353535;
+}
+
+.ville-localisation {
+  font-weight: bold;
+  color: #353535;
+  font-size: 22px;
+}
+
+.introduction {
+  display: flex;
+  flex-direction: column;
+  background-color: #f6f6f6;
+  text-align: center;
+}
+.introduction .sous-titre1 {
+  font-weight: bold;
+  font-size: 5.5vw;
+  width: 60%;
+  margin-left: 22%;
+}
+
+.sous-titre2 {
+  font-size: 4vw;
+  width: 75%;
+  margin-left: 17%;
+  color: #353535;
+  font-weight: 100;
+  margin-top: 0;
+}
+
+.button-explorerR {
+  background: linear-gradient(to bottom, #d96fcf, #d06dcf, #ac61d0);
+  color: white;
+  margin: 35px 5px;
+  padding: 20px 20px;
+  width: 50%;
+  font-size: 3vw;
+  border-radius: 50px;
+  font-weight: bold;
+  margin-bottom: 60px;
+  margin-left: 29%;
+  border: none;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.fonctionnement h2 {
+  margin-left: 5%;
+}
+
+.liens-fonctionnement {
+  display: flex;
+}
+
+/*# sourceMappingURL=styles.css.map */

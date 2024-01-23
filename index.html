@@ -7,25 +7,25 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
     integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="/assets/styles.css">
+    <link rel="stylesheet" href="/sass/styles.css">
 </head>
 
  <body>
-    <header class="header">
-      <nav class="nav-logo">
-        <img class="logo" src="/assets/images/logo/ohmyfood.png">
-      </nav>
+    <header class="all-header">
+      <img class="logo" src="/assets/images/logo/ohmyfood.png"> 
+    </header>     
+    <nav class="nav-logo">
       <div class="localisation">
         <i class="fa-solid fa-location-dot"></i>
         <p class="ville-localisation">Paris, Belleville</p>
       </div>
-      <div class="introduction">
+    </nav>
+    <div class="introduction">
         <h2 class="sous-titre1">Réservez le menu qui vous convient</h2>
-        <h3 class="sous-titre2">Découvrez des restaurants d'exception sélectionnés par nos soins.</h3>
+        <h3 class="sous-titre2">Découvrez des restaurants d'exception, sélectionnés par nos soins.</h3>
         <button class="button-explorerR">Explorer nos restaurants</button>
-      </div>
-    </header>
-
+    </div>
+   
     <main>
       <div class="all-fonctionnement">
         <section class="fonctionnement">
@@ -37,14 +37,14 @@
                 <i class="fa-solid fa-mobile-screen-button"></i>
                 <p>Choisissez un restaurant</p>
             </div>
-            <div class="liens-fonctionnement">
+            <div class="liens-fonctionnement2">
                 <button class="logo-fonctionnement">
                   <p class="logo-numero">2</p>
                 </button>
                 <i class="fa-solid fa-list-ul"></i>
                 <p>Composez votre menu</p>
             </div>
-            <div class="liens-fonctionnement">
+            <div class="liens-fonctionnement2">
                 <button class="logo-fonctionnement">
                   <p class="logo-numero">3</p>
                 </button>
@@ -58,28 +58,30 @@
         <section class="restaurants">
             <h2 class="section-title">Restaurants</h2>
                 <article class="card-restaurants">
-                    <a href="#">
-                        <img class="card-img" src="/assets/images/restaurants/PaletteDuGout.jpg" alt="La palette du gout">
+                    <a href="/restaurants/Menu1.html">
+                        <!-- <!-- <img class="card-img" src="/assets/images/restaurants/PaletteDuGout.jpg" alt="La palette du gout"> --> -->
                         <div class="taille-card">
                             <h4><b>La palette du goût</b></h4>
+                            <button class="new-menu">Nouveau</button>
                             <p class="card-subtitle">Ménilmontant</p>
                             <i class="fa-regular fa-heart"></i>
                         </div>
                     </a>
                 </article>
                 <article class="card-restaurants">
-                    <a href="#">
-                        <img class="card-img" src="/assets/images/restaurants/LaNoteEnchante.jpg" alt="La note enchantée">
+                    <a href="/restaurants/Menu2.html">
+                        <!-- <!-- <img class="card-img" src="/assets/images/restaurants/LaNoteEnchante.jpg" alt="La note enchantée"> --> -->
                         <div class="taille-card">
                             <h4><b>La note enchantée</b></h4>
+                            <button class="new-menu">Nouveau</button>
                             <p class="card-subtitle">Charonne</p>
                             <i class="fa-regular fa-heart"></i>
                         </div>
                     </a>
                 </article>
                 <article class="card-restaurants">
-                    <a href="#">
-                        <img class="card-img" src="/assets/images/restaurants/Française.jpg" alt="A la française">
+                    <a href="/restaurants/Menu3.html">
+                        <!-- <!-- <img class="card-img" src="/assets/images/restaurants/Française.jpg" alt="A la française"> --> -->
                         <div class="taille-card">
                             <h4><b>À la française</b></h4>
                             <p class="card-subtitle">Cité Rouge</p>
@@ -88,8 +90,8 @@
                     </a>
                 </article>
                 <article class="card-restaurants">
-                    <a href="#">
-                        <img class="card-img" src="/assets/images/restaurants/LeDeliceDesSens.jpg" alt="Le délice des sens">
+                    <a href="/restaurants/Menu4.html">
+                        <!-- <!-- <img class="card-img" src="/assets/images/restaurants/LeDeliceDesSens.jpg" alt="Le délice des sens"> --> -->
                         <div class="taille-card">
                             <h4><b>Le délice des sens</b></h4>
                             <p class="card-subtitle">Folie-Méricourt</p>
@@ -101,8 +103,8 @@
       </div>
     </main>
 
-    <footer>
-      <div class="all-footer">
+    <footer class="all-footer">
+      <div class="all-footer2">
           <h3>Ohmyfood</h3>
         <div class="footer-logo">
           <i class="fa-solid fa-utensils"></i>
@@ -119,4 +121,5 @@
       </div>
     </footer>   
  </body>
-</html>
+</html> 
+
