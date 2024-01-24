@@ -1,18 +1,26 @@
 @import "couleur";
 @import "police";
 @import "card";
-@import "autres";
+@import "general";
+@import "fonctionnement";
+@import "ombres";
+@import "btn-fonctionnement";
 
 // General
 body {
     margin: 0;
-    font-family: $texte;
+    font-family: $police_texte;
+}
+
+.section-title {
+    margin-left: $margin_titre;
+    font-size: $taille_titre;
 }
 
 //HEADER ET NAV 
 
 .all-header {
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    // box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
     .logo {
         margin-top: 3%;
         margin-bottom: 3%;
@@ -25,7 +33,7 @@ body {
     display: $display-settings;
     flex-direction: $flex-vertical;
     align-items: center;   
-    box-shadow:0 -5px 10px rgba(0, 0, 0, 0.1), $ombre;
+    // box-shadow:0 -5px 10px rgba(0, 0, 0, 0.1), $ombre_header;
     background-color: $couleur_localisation ;
     .localisation {
         display: $display-settings; 
@@ -52,14 +60,14 @@ body {
     text-align: center; 
     .sous-titre1 {
         font-weight: $texte_gras;
-        font-size: $fontsize_titre;
+        font-size: $taille_titre;
         width: 60%;
         margin-left: 22%;
     }
 }
 
 .sous-titre2 {
-    font-size: $fontsize_descrip;
+    font-size: $taille_description_header;
     width: 75%;
     margin-left: 17%;
     color: #353535;
@@ -74,14 +82,79 @@ body {
     padding: 20px 20px; 
     width: 50%;
     font-size: 3vw;
-    border-radius: 50px;
+    border-radius: $border_btn_numero;
     font-weight: $texte_gras;
     margin-bottom: 60px;
     margin-left: 29%;
     border: $sans_bordure;
-    box-shadow: $ombre;
+    box-shadow: $ombre_header;
 }
 
+// Fonctionnement
+
+.fonctionnement h2 {
+    margin-left: $margin_titre;
+    font-size: $taille_titre;
+}
+
+.liens-fonctionnement {
+    display: $display-settings;
+    .btn-fonctionnement{
+        position: $position_boutton_numero;
+        background: $couleur_primaire;
+        border: $sans_bordure;
+        height: $hauteur_btn;
+        width: $largeur_btn;
+        border-radius: $border_btn_numero;
+        margin-top: 40px;
+        margin-left: 85%;
+        .logo-numero {
+            margin-top: 6px;
+            color: white;
+            font-weight: $texte_gras;
+            font-size: $taille_numero_btn
+        }
+    }
+}
+
+.texte_fonctionnement{
+    display: $display-settings;
+    background: $couleur_menu;
+    margin:35px 5px;
+    padding: $espace_entre_couleur_texte;
+    width: $largeur_couleur_arriere;
+    font-size: $taille_texte_fonctionnement;
+    border-radius: $border_texte_fonctionnement;
+    font-weight: $texte_gras;
+    margin-top: 10px;
+    box-shadow: $ombre_fonctionnement;
+    .fa-solid.fa-mobile-screen-button {
+       margin-top: $hauteur_du_logo;
+       padding-left: $espace_du_texte;
+       font-size: $taille_icon;
+       color: $couleur_icon
+    }
+}
+
+.fa-solid.fa-list-ul {
+    margin-top: $hauteur_du_logo;
+    padding-left: $espace_du_texte;
+    font-size: $taille_icon;
+    color: $couleur_icon
+}
+
+.fa-solid.fa-store {
+    margin-top: $hauteur_du_logo;
+    padding-left: $espace_du_texte;
+    font-size: $taille_icon;
+    color: $couleur_primaire;
+}
+
+.texte_fonctionnement p {
+    margin-left: 7%;
+}
+
+// Restaurants
 
 
 
