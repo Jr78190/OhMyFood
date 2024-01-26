@@ -15,12 +15,13 @@ body {
 .section-title {
     margin-left: $margin_titre;
     font-size: $taille_titre;
+    margin-top: 10%;
 }
 
 //HEADER ET NAV 
 
 .all-header {
-    // box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+     box-shadow: $ombre_header;
     .logo {
         margin-top: 3%;
         margin-bottom: 3%;
@@ -33,7 +34,7 @@ body {
     display: $display-settings;
     flex-direction: $flex-vertical;
     align-items: center;   
-    // box-shadow:0 -5px 10px rgba(0, 0, 0, 0.1), $ombre_header;
+    box-shadow: $ombre_header;
     background-color: $couleur_localisation ;
     .localisation {
         display: $display-settings; 
@@ -87,29 +88,32 @@ body {
     margin-bottom: 60px;
     margin-left: 29%;
     border: $sans_bordure;
-    box-shadow: $ombre_header;
+    box-shadow: $ombre_fonctionnement;
 }
+
 
 // Fonctionnement
 
 .fonctionnement h2 {
-    margin-left: $margin_titre;
     font-size: $taille_titre;
 }
 
 .liens-fonctionnement {
+    margin-left: $margin_titre;
     display: $display-settings;
+    position: $position_boutton_numero;
     .btn-fonctionnement{
-        position: $position_boutton_numero;
+        position: absolute;
+        margin-left: -10px;
         background: $couleur_primaire;
         border: $sans_bordure;
         height: $hauteur_btn;
         width: $largeur_btn;
         border-radius: $border_btn_numero;
         margin-top: 40px;
-        margin-left: 85%;
         .logo-numero {
             margin-top: 6px;
+            margin-left: 10px;
             color: white;
             font-weight: $texte_gras;
             font-size: $taille_numero_btn
@@ -132,29 +136,153 @@ body {
        margin-top: $hauteur_du_logo;
        padding-left: $espace_du_texte;
        font-size: $taille_icon;
-       color: $couleur_icon
+       color: $couleur_icon;
     }
+}
+
+.fa-solid.fa-mobile-screen-button:hover {
+    color: $couleur_primaire
 }
 
 .fa-solid.fa-list-ul {
     margin-top: $hauteur_du_logo;
     padding-left: $espace_du_texte;
     font-size: $taille_icon;
-    color: $couleur_icon
+    color: $couleur_icon;
+}
+
+.fa-solid.fa-list-ul:hover {
+    color: $couleur_primaire
 }
 
 .fa-solid.fa-store {
     margin-top: $hauteur_du_logo;
     padding-left: $espace_du_texte;
     font-size: $taille_icon;
-    color: $couleur_primaire;
+    color: $couleur_icon;
 }
+
+.fa-solid.fa-store:hover {
+    color: $couleur_primaire
+}
+
 
 .texte_fonctionnement p {
     margin-left: 7%;
 }
 
 // Restaurants
+
+.all-restaurants {
+    display: $display-settings;
+    background-color: $couleur_menu;
+    flex-direction: $flex-vertical;
+    margin-top: 5%;
+    .card-restaurants {
+        margin-bottom: 25px;
+    }
+        .card-restaurants a {
+            text-decoration: none;  
+            .card-img {
+                height: 200px;
+                width: 87%;
+                border-radius: 20px 20px 0px 0px;
+                object-fit: cover;
+                margin-left: 5%;
+            }
+    }
+} 
+
+.taille-card {
+    position: relative;
+    border-radius: 0px 0px 20px 20px;
+    margin-left: 5%;
+    width: 87%;
+    height: 100px;
+    display: flex;
+    background-color: white;
+    flex-direction: column-reverse;
+    .new-menu {
+        background: $couleur_new_menu;
+        color: $couleur_text_new_menu;
+        font-weight: $texte_gras;
+        padding: 11.2px 24px;
+        border-radius: 4px;
+        position: absolute;
+        top: -11.5rem;
+        right: 1.5rem;
+    }
+}
+
+.text-card {
+    display: flex;
+    flex-direction: column;
+    margin-left: 6%;
+}
+
+.text-card h4 {
+    font-size: $taille_titre_card;
+    color: black;
+    margin-bottom: -13px; 
+}
+
+.card-subtitle {
+    font-size: $taille_description_card;
+    color: black;
+}
+
+.fa-regular.fa-heart {
+    font-size: 30px;
+    top: 17%;
+    position: absolute;
+    right: 5%;
+    color: black;
+}
+
+// Footer 
+
+.all-footer {
+    background: $couleur_footer;
+    color: white;
+    font-size: 4vw;
+    .all-footer2 {
+        margin-left: 5%;
+        padding: 15px;
+    }
+}
+
+.all-footer h3 {
+    font-family: $police_logo_titres;
+}
+
+.footer-logo {
+    display: $display-settings;
+    margin-left: 1%;
+    padding-top: 5px;
+}
+
+.footer-logo p {
+    margin: 0;
+    margin-left:5%;
+    font-weight: $texte_gras
+}
+
+.footer-logo {
+    display: $display-settings;
+    .fa-solid.fa-handshake-simple {
+        transform: rotate(150deg);
+        margin-left: -1.7%;
+    }
+}
+
+.footer-simple a {
+    text-decoration: none;
+    color: white;
+}
+
+
+
+
 
 
 
