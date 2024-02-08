@@ -4,120 +4,170 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>La Palette De Goût</title>
+    <link href='https://fonts.googleapis.com/css?family=Shrikhand' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
     integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="../assets/styles.css">
+    <link rel="stylesheet" href="../sass/styles.css">
 </head>
 
  <body>
-    <header class="all-header">
-      <nav class="nav-logo">
+    <header class="header-menu">
+      <a href="/">
         <i class="fa-solid fa-arrow-left"></i>
-        <img class="logo" src="../assets/images/restaurants/PaletteDuGout.jpg">
-      </nav>
-    </header>
+      </a>
+        <img class="logo-menu" src="/assets/images/logo/ohmyfood.png"> 
+    </header> 
+        <img class="img-menu" src="/assets/images/restaurants/PaletteDuGout.jpg" alt="La palette du gout"> 
 
     <main>        
       <div class="all-menu">
         <div class="all-titre">
-              <h2 class="section-title">La palette du goût</h2>
-              <i class="fa-regular fa-heart"></i>
+              <h2 class="section-title-menu">La palette du goût</h2>
+              <i class="fa-regular fa-heart menu"></i>
+              <i class="fa-solid fa-heart menu"></i>
         </div>
-        <section class="entrees">
+        <section>
               <h4 class="section-title1">ENTRÉES</h4>
-          <article>
+          <article class="article-menu">
             <div class="card-menu">
               <h4><b>Fricassée d'escargots</b></h4>
-              <p class="subtitle-menu">Au piment d'Espelette</p>
-              <p class="prix-menu">25€</p>
+              <div class="nom-menu">
+                <p class="subtitle-menu">Au piment d'Espelette</p>
+                <b class="prix-menu">25€</b>
+              </div>
+              <div class="check">
+                <i class="fa-solid fa-circle-check"></i>
+              </div>
             </div>
           </article>
-          <article>
+          <article class="article-menu">
             <div class="card-menu">
               <h4><b>Foie gras de canard mi-cuit </b></h4>
-              <p class="subtitle-menu">Et ses copeaux de truffe noire</p>
-              <p class="prix-menu">35€</p>
+              <div class="nom-menu">
+                <p class="subtitle-menu">Et ses copeaux de truffe noire</p>
+                <b class="prix-menu">35€</b>
+              </div>
+              <div class="check">
+                <i class="fa-solid fa-circle-check"></i>
+              </div>
             </div>
           </article>
-          <article>
+          <article class="article-menu">
             <div class="card-menu">
               <h4><b>Oeuf au plat</b></h4>
-              <p class="subtitle-menu">Assaisonné à la truffe sur lit de caviar</p>
-              <p class="prix-menu">20€</p>
+              <div class="nom-menu">
+                <p class="subtitle-menu">Assaisonné à la truffe sur lit de caviar</p>
+                <b class="prix-menu">20€</b>
+              </div>
+              <div class="check">
+                <i class="fa-solid fa-circle-check"></i>
+              </div>
             </div>
           </article>
         </section>
 
         <section class="plats">
               <h4 class="section-title1">PLATS</h4>
-          <article>
+          <article class="article-menu">
             <div class="card-menu">
               <h4><b>Filet de boeuf aux herbes</b></h4>
-              <p class="subtitle-menu">Accompagné de sa ribambelle de légumes</p>
-              <p class="prix-menu">40€</p>
+              <div class="nom-menu">
+                <p class="subtitle-menu">Accompagné de sa ribambelle de légumes</p>
+                <b class="prix-menu">40€</b>
+              </div>
+              <div class="check">
+                <i class="fa-solid fa-circle-check"></i>
+              </div>
             </div>
           </article>
-          <article>
+          <article class="article-menu">
             <div class="card-menu">
               <h4><b>Parmentier de queue de boeuf</b></h4>
-              <p class="subtitle-menu">À la truffe noire sur sa purée de panais</p>
-              <p class="prix-menu">35€</p>
+              <div class="nom-menu">
+                <p class="subtitle-menu">À la truffe noire sur sa purée de panais</p>
+                <b class="prix-menu">35€</b>
+              </div>
+              <div class="check">
+                <i class="fa-solid fa-circle-check"></i>
+              </div>
             </div>
           </article>
-          <article>
+          <article class="article-menu">
             <div class="card-menu">
               <h4><b>Filet de turbot</b></h4>
-              <p class="subtitle-menu">Aux agrumes</p>
-              <p class="prix-menu">44€</p>
+              <div class="nom-menu">
+                <p class="subtitle-menu">Aux agrumes</p>
+                <b class="prix-menu">44€</b>
+              </div>
+              <div class="check">
+                <i class="fa-solid fa-circle-check"></i>
+              </div>
             </div>
           </article>
         </section>
 
         <section class="desserts">
               <h4 class="section-title1">DESSERTS</h4>
-          <article>
+          <article class="article-menu">
             <div class="card-menu">
               <h4><b>Paris-Brest</b></h4>
-              <p class="subtitle-menu">Revisité</p>
-              <p class="prix-menu">18€</p>
+              <div class="nom-menu">
+                <p class="subtitle-menu">Revisité</p>
+                <b class="prix-menu">18€</b>
+              </div>
+              <div class="check">
+                <i class="fa-solid fa-circle-check"></i>
+              </div>
             </div>
           </article>
-          <article>
+          <article class="article-menu">
             <div class="card-menu">
               <h4><b>Macaron au chocolat d'exception</b></h4>
-              <p class="subtitle-menu">Et glace à la vanille de Madagastar</p>
-              <p class="prix-menu">22€</p>
+              <div class="nom-menu">
+                <p class="subtitle-menu">Et glace à la vanille de Madagastar</p>
+                <b class="prix-menu">22€</b>
+              </div>
+              <div class="check">
+                <i class="fa-solid fa-circle-check"></i>
+              </div>
             </div>
           </article>
-          <article>
+          <article class="article-menu">
             <div class="card-menu">
               <h4><b>Mousse au chocolat</b></h4>
-              <p class="subtitle-menu">Au piment d'Espelette et à la truffe noire</p>
-              <p class="prix-menu">23€</p>
+              <div class="nom-menu">
+                <p class="subtitle-menu">Au piment d'Espelette et à la truffe noire</p>
+                <b class="prix-menu">23€</b>
+              </div>
+              <div class="check">
+                <i class="fa-solid fa-circle-check"></i>
+              </div>
             </div>
           </article>
               <button class="btn-commander">Commander</button>
-        </section>
+        </section> 
       </div>
     </main>
 
-    <footer>
-      <div class="all-footer">
-          <h3>Ohmyfood</h3>
+    <footer class="all-footer">
+      <div class="all-footer2">
+          <h3 class="footer-mobile">Ohmyfood</h3>
         <div class="footer-logo">
           <i class="fa-solid fa-utensils"></i>
           <p>Proposer un restaurant</p>
         </div>
         <div class="footer-logo">
           <i class="fa-solid fa-handshake-simple"></i>
-          <p>Devenir partenaire</p>
+          <p class=>Devenir partenaire</p>
         </div>
         <div class="footer-simple">
           <p>Mentions légales</p>
-          <a href="mailto:adresse@gmail.com">Contact</a>
+          <a href="mailto:Ohmyfood@gmail.com">Contact</a>
         </div>
+        <h3 class="footer-ordinateur">Ohmyfood</h3>
       </div>
-    </footer>   
+    </footer>  
  </body>
-</html>
+</html> 
+

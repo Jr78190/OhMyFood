@@ -5,6 +5,7 @@
 @import "fonctionnement";
 @import "ombres";
 @import "btn-fonctionnement";
+@import "animation";
 
 // General
 body {
@@ -15,8 +16,48 @@ body {
 .section-title {
     margin-left: $margin_titre;
     font-size: $taille_titre;
-    margin-top: 10%;
+    margin-top: 5%;
 }
+
+// Loader
+
+.loader-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    animation: fadeOutBackground 3s 3s forwards; /* Animation pour le fond blanc */
+}
+  
+  .loader {
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid $couleur_primaire;
+    width: 120px;
+    height: 120px;
+    animation: spin 1s linear infinite, fadeOutLoader 1s 3s forwards; /* Deux animations pour le loader */
+}
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  @keyframes fadeOutLoader {
+    0% { opacity: 1; }
+    100% { opacity: 0; display: none; } 
+  }
+  
+  @keyframes fadeOutBackground {
+    0% { opacity: 1; }
+    100% { opacity: 0; display: none; } 
+  }
 
 //HEADER ET NAV 
 
@@ -33,7 +74,7 @@ body {
 .nav-logo {
     display: $display-settings;
     flex-direction: $flex-vertical;
-    align-items: center;   
+    align-items: $alignement_au_milieu;   
     box-shadow: $ombre_header;
     background-color: $couleur_localisation ;
     .localisation {
@@ -58,7 +99,7 @@ body {
     display: $display-settings;
     flex-direction: $flex-vertical;
     background-color: $couleur_menu;
-    text-align: center; 
+    text-align: $alignement_au_milieu; 
     .sous-titre1 {
         font-weight: $texte_gras;
         font-size: $taille_titre;
@@ -88,7 +129,11 @@ body {
     margin-bottom: 60px;
     margin-left: 29%;
     border: $sans_bordure;
-    box-shadow: $ombre_fonctionnement;
+    box-shadow: $ombre_fonctionnement;  
+    &:hover {
+        background: linear-gradient(to bottom, #e69fcf, #e06dcf, #cc61d0); 
+        box-shadow: $ombre_hover;
+    }
 }
 
 
@@ -137,11 +182,10 @@ body {
        padding-left: $espace_du_texte;
        font-size: $taille_icon;
        color: $couleur_icon;
-    }
-}
-
-.fa-solid.fa-mobile-screen-button:hover {
-    color: $couleur_primaire
+       &:hover {
+          color: $couleur_primaire
+        }
+    }    
 }
 
 .fa-solid.fa-list-ul {
@@ -149,10 +193,9 @@ body {
     padding-left: $espace_du_texte;
     font-size: $taille_icon;
     color: $couleur_icon;
-}
-
-.fa-solid.fa-list-ul:hover {
-    color: $couleur_primaire
+    &:hover {
+        color: $couleur_primaire
+    }
 }
 
 .fa-solid.fa-store {
@@ -160,12 +203,10 @@ body {
     padding-left: $espace_du_texte;
     font-size: $taille_icon;
     color: $couleur_icon;
+    &:hover {
+        color: $couleur_primaire
+    }
 }
-
-.fa-solid.fa-store:hover {
-    color: $couleur_primaire
-}
-
 
 .texte_fonctionnement p {
     margin-left: 7%;
@@ -179,7 +220,7 @@ body {
     flex-direction: $flex-vertical;
     margin-top: 5%;
     .card-restaurants {
-        margin-bottom: 25px;
+        margin-bottom: 50px;
     }
         .card-restaurants a {
             text-decoration: none;  
@@ -236,7 +277,195 @@ body {
     top: 17%;
     position: absolute;
     right: 5%;
+    transition: opacity 0.3s ease;
+    opacity: $coeur_voyant;
     color: black;
+    &:hover {
+        opacity: $coeur_disparait
+    }
+}
+
+.fa-solid.fa-heart {
+    font-size: 30px;
+    top: 17%;
+    position: absolute;
+    right: 5%;
+    transition: opacity 0.3s ease;
+    background: $couleur_boutton;
+    opacity: $coeur_disparait;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    &:hover {
+        opacity: $coeur_voyant;
+    }
+}
+
+// Page Menu 
+
+.header-menu {
+    display: $display-settings;
+    margin-top: 5%;
+    justify-content: space-around;
+    align-items: $alignement_au_milieu;
+    .fa-solid.fa-arrow-left {
+        font-size: 6vw;
+        color: black;
+    }
+}     
+
+.logo-menu {
+    margin-right: 20%;
+    width: 41%;
+}
+
+.img-menu {
+    margin-top: 5%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.img-menu2 {
+    height: 300px;
+    margin-top: 5%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.all-menu {
+    position: relative;
+    margin-top: -10%;
+    background: $couleur_menu;
+    border-radius: 50px 50px 0 0;
+    .all-titre {
+        display: $display-settings;
+        .section-title-menu {
+            margin-left: $margin_titre;
+            font-size: $taille_titre;
+            margin-top: 10%;
+            font-family: $police_logo_titres;
+        }
+    }
+}
+
+.all-menu2{
+    position: relative;
+    margin-top: -45%;
+    background: $couleur_menu;
+    border-radius: 50px 50px 0 0;
+}
+
+.fa-regular.fa-heart.menu {
+    font-size: 7vw;
+    position: absolute;
+    right: 15%;
+    top: 11vw;
+    transition: opacity 0.3s ease;
+    opacity: $coeur_voyant;
+    &:hover {
+        opacity: $coeur_disparait
+    }
+}
+
+.fa-solid.fa-heart.menu {
+    font-size: 7vw;
+    position: absolute;
+    right: 15%;
+    top: 11vw;
+    transition: opacity 0.3s ease;
+    opacity: $coeur_disparait;
+    &:hover {
+        opacity: $coeur_voyant;
+    }
+}
+
+.section-title1 {
+    font-weight: 100;
+    font-size: 4vw;
+    margin-left: $margin_titre;
+    position: relative;
+}
+
+.section-title1::after {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 58px;
+    height: 5px;
+    background-color: $couleur_tertiaire; 
+}
+
+.article-menu {
+    margin-left: 3%;
+    margin-bottom: 10px;
+    opacity: 0;
+    animation: fadeInCascade 1s ease-in-out forwards;
+    .card-menu {
+        background: white;
+        margin:35px 5px;
+        padding: $espace_entre_couleur_texte;
+        width: $largeur_couleur_arriere;
+        border-radius: $border_texte_fonctionnement;
+        margin-top: 10px;
+        box-shadow: $ombre_fonctionnement;
+    }
+}
+
+.card-menu h4 {
+    margin-bottom: 5px; 
+    font-size: 4vw;
+    margin-top: 0; 
+}
+
+.article-menu:nth-child(1) {
+    animation-delay: 0.5s; 
+}
+  
+.article-menu:nth-child(2) {
+    animation-delay: 1s; 
+}
+  
+.article-menu:nth-child(3) {
+    animation-delay: 1.5s;
+}
+
+  @keyframes fadeInCascade {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+.nom-menu {
+    display: $display-settings;
+    justify-content: space-between;
+    font-size: 4vw;
+    align-items: center;
+    .subtitle-menu {
+        margin: 0;
+        font-size: 3.5vw;  
+    }
+}
+  
+.btn-commander {
+    background: $couleur_boutton;
+    color: white;
+    margin:35px 5px;
+    padding: 20px 20px; 
+    width: 50%;
+    font-size: 3vw;
+    border-radius: $border_btn_numero;
+    font-weight: $texte_gras;
+    margin-bottom: 60px;
+    margin-left: 29%;
+    border: $sans_bordure;
+    box-shadow: $ombre_fonctionnement;
+    &:hover {
+        background: linear-gradient(to bottom, #e69fcf, #e06dcf, #cc61d0); 
+        box-shadow: $ombre_hover;
+    }
 }
 
 // Footer 
@@ -280,10 +509,9 @@ body {
     color: white;
 }
 
-
-
-
-
+.footer-ordinateur {
+    display: none;
+}
 
 
 
