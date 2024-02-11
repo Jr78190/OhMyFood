@@ -8,6 +8,7 @@
 @import "animation";
 
 // General
+
 body {
     margin: 0;
     font-family: $police_texte;
@@ -147,7 +148,7 @@ body {
     margin-left: $margin_titre;
     display: $display-settings;
     position: $position_boutton_numero;
-    .btn-fonctionnement{
+    .btn-fonctionnement {
         position: absolute;
         margin-left: -10px;
         background: $couleur_primaire;
@@ -222,17 +223,19 @@ body {
     .card-restaurants {
         margin-bottom: 50px;
     }
-        .card-restaurants a {
-            text-decoration: none;  
-            .card-img {
-                height: 200px;
-                width: 87%;
-                border-radius: 20px 20px 0px 0px;
-                object-fit: cover;
-                margin-left: 5%;
-            }
-    }
 } 
+
+.card-restaurants a {
+    text-decoration: none;  
+    .card-img {
+        height: 200px;
+        width: 87%;
+        border-radius: 20px 20px 0px 0px;
+        object-fit: cover;
+        margin-left: 5%;
+    }  
+}
+
 
 .taille-card {
     position: relative;
@@ -347,7 +350,7 @@ body {
     }
 }
 
-.all-menu2{
+.all-menu2 {
     position: relative;
     margin-top: -45%;
     background: $couleur_menu;
@@ -494,7 +497,7 @@ body {
     margin: 0;
     margin-left:5%;
     font-weight: $texte_gras
-}
+}       
 
 .footer-logo {
     display: $display-settings;
@@ -509,10 +512,410 @@ body {
     color: white;
 }
 
+.footer-mobile {
+    display: block;
+}
 .footer-ordinateur {
     display: none;
 }
 
+@media only screen and (min-width: $version_ordinateur) {
+ 
+    // General
 
+    body {
+        margin: 0;
+        font-family: $police_texte;
+    }
+
+    //HEADER ET NAV 
+    
+    .all-header {
+        box-shadow:none;
+        .logo {
+            margin-top: 3%;
+            margin-bottom: 3%;
+            width: 30%;
+            margin-left: 39%;
+        }
+    }
+
+    .nav-logo {
+        display: $display-settings;
+        flex-direction: $flex-vertical;
+        align-items: $alignement_au_milieu;   
+        background-color: $couleur_localisation ;
+        box-shadow: none;
+        .localisation {
+            margin-left: 6%;
+            display: $display-settings; 
+            .fa-solid.fa-location-dot {
+                font-size: 20px;
+                margin-top: 12%;
+                font-size: 22px;
+                padding-right: 20px;
+                color: #353535;
+            }
+        }
+    }
+
+    .header-menu {
+        display: flex;
+        margin-top: 3%;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .header-menu .logo-menu {
+        margin-right: 34%;
+        width: 20%;
+        .header-menu a {
+            margin-right: 27%;
+            .fa-solid.fa-arrow-left {
+                font-size: 3vw;
+            }
+        }
+    }
+
+    .img-menu {
+        height: 500px;
+        margin-top: 5%;
+        width: 100%;
+    }
+
+    .introduction {
+        display: $display-settings;
+        flex-direction: $flex-vertical;
+        background-color: $couleur_menu;
+        text-align: $alignement_au_milieu; 
+        .sous-titre1 {
+            font-weight: $texte_gras;
+            font-size: 3.3vw;
+            width:80%;
+            margin-left: 14%;
+        }
+    }
+
+    .sous-titre2 {
+        font-size: 1.8vw;
+    }
+
+    .button-explorerR {
+        background: $couleur_boutton;
+        color: white;
+        margin:35px 5px;
+        padding: 20px 20px; 
+        width: 30%;
+        font-size: 1.5vw;
+        border-radius: $border_btn_numero;
+        font-weight: $texte_gras;
+        margin-bottom: 60px;
+        margin-left: 36%;
+        border: $sans_bordure;
+        box-shadow: $ombre_fonctionnement;
+    }
+
+    // Fonctionnement
+
+    .all-fonctionnement {
+        display: flex;
+        margin-left: 6%;
+    }
+
+    .fonctionnement h2 {
+        font-size: 3vw;
+        margin-left: 2%;
+    }
+
+    .div-fonctionnement {
+        display: flex;
+        flex-direction: row;
+        .liens-fonctionnement {
+            display: flex;
+            margin: 14px;
+            justify-content: space-between;
+        }
+    }
+
+    .texte_fonctionnement {
+        display: $display-settings;
+        background: $couleur_menu;
+        padding: $espace_entre_couleur_texte;
+        font-size: 1.3vw;
+        border-radius: $border_texte_fonctionnement;
+        font-weight: $texte_gras;
+        box-shadow: $ombre_fonctionnement;
+        width: 24vw;
+        .texte_fonctionnement .fa-solid.fa-mobile-screen-button {
+            font-size: 2vw;
+            padding-left: 25px;
+            margin-top: 4%;
+        }
+    }
+
+    .fa-solid.fa-list-ul {
+        font-size: 2vw;
+        padding-left: 25px;
+        margin-top: 4%;
+    }
+
+    .fa-solid.fa-store {
+        font-size: 2vw;
+        padding-left: 25px;
+        margin-top: 4%;
+    }
+
+    .texte_fonctionnement p {
+        margin-left: 0%;
+        padding-left: 30px;
+    }
+
+    // Restaurants
+
+    .all-restaurants {
+        display: $display-settings;
+        background-color: $couleur_menu;
+        flex-direction: $flex-vertical;
+        margin-top: 5%;
+        .restaurants h2 {
+            font-size: 3vw;
+            margin-left: 8%;
+        }
+    }
+
+    .div-restaurants {
+        display: flex;
+        flex-wrap:wrap;
+        justify-content: space-around;
+        .card-restaurants {
+            margin-bottom: 50px;
+            margin-left: 2%;
+        }
+    }
+
+    .card-restaurants a {
+        text-decoration: none;  
+        .card-img {
+            height: 200px;
+            width: 35.8vw;
+            border-radius: 20px 20px 0px 0px;
+            object-fit: cover;
+            margin-left: 5%;
+        }  
+    }
+        
+    .taille-card {
+        position: relative;
+        border-radius: 0px 0px 20px 20px;
+        margin-left: 2%;
+        width: 37vw;
+        height: 100px;
+        display: flex;
+        background-color: white;
+    }    
+
+    // Page Menu
+
+    .header-menu {
+       display: flex;
+       margin-top: 3%;
+       justify-content: space-around;
+       align-items: center;
+    }
+
+    .header-menu a {
+        margin-right: 27%;
+          .fa-solid.fa-arrow-left {
+            font-size: 3vw;
+          }
+      }
+
+    .logo-menu {
+        margin-right: 34%;
+        width: 20%;
+    }
+
+    .img-menu {
+        object-fit: cover;
+        transform: scale(1.1);
+        height: 400px;
+        margin-top: 3%;
+        width: 95.5%;
+    }
+
+    .all-menu {
+        margin-left: 9.5%;
+        position: relative;
+        margin-top: -1.5%;
+        width: 84%;
+        background: #f6f6f6;
+        border-radius: 50px 50px 0 0;
+        .all-titre {
+        display: flex;
+            .section-title-menu {
+                margin-left: 33%;
+                font-size: 3vw;
+                margin-top: 5%;
+                font-family: $police_logo_titres;
+            } 
+        }
+    }
+
+    .fa-regular.fa-heart.menu {
+        font-size: 3vw;
+        position: absolute;
+        right: 26%;
+        top: 5vw;
+        transition: opacity 0.3s ease;
+        opacity: 1;
+    }
+
+    .fa-solid.fa-heart.menu {
+        font-size: 3vw;
+        position: absolute;
+        right: 26%;
+        top: 5vw;
+        transition: opacity 0.3s ease;
+        opacity: 0;
+    }
+
+    .all-menu section {
+        margin-left: 12%;
+    }
+
+    .section-title1 {
+        font-weight: 100;
+        font-size: 2vw;
+        position: relative;
+    }
+
+    .section-title1::after {
+        content: "";
+        position: absolute;
+        bottom: -8px;
+        left: 0;
+        width: 5.5vw;
+        height: 5px;
+        background-color: $couleur_tertiaire; 
+    }
+
+    .card-menu {
+        position: relative;
+        overflow: hidden;  
+        width: 75%;
+    }
+
+    .card-menu h4 {
+        font-size: 2vw;
+        margin-top: 0;
+    }  
+    
+
+    .nom-menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 2vw;
+        .subtitle-menu {
+            margin: 0;
+            font-size: 1.5vw;
+        }
+    }
+
+    .prix-menu {
+        transition: margin-right 0,3s ease;
+    }
+
+    .card-menu:hover .prix-menu {
+        margin-right: 12%;
+    }
+
+    .check {
+        border-radius: 0px 20px 20px 0px;
+        width: 12%;
+        position: absolute;
+        top: 0%;
+        right: -12%;
+        background-color: rgb(153, 226, 208);
+        height: 150px;
+    }
+
+    .card-menu:hover .check {
+        right: 0%;
+        transition: margin-right 0,3s ease;
+    }
+
+    .fa-solid.fa-circle-check {
+        font-size: 2.5vw;
+        margin-left: 28%;
+        margin-top: 45%;
+        color: white;
+        overflow: hidden;
+    }
+
+    .btn-commander {
+        margin-left: 28%;
+        font-size: 1.5vw;
+        width: 30%;
+    }
+
+    .all-footer {
+        background: $couleur_footer;
+        color: white;
+        font-size: 1.5vw;
+        .all-footer2 {
+            padding: 15px;
+            align-items: center;
+            display: flex;
+            justify-content: flex-end;
+            margin-right: 10%;
+        }
+    }
+
+    .all-footer h3 {
+        font-family: $police_logo_titres;
+    }
+
+    .footer-logo {
+        display: $display-settings;
+        padding-top: 5px;
+        align-items: center;
+    }
+
+    .footer-logo p {
+        margin: 15px;
+        font-weight: $texte_gras
+    }
+
+    .footer-logo {
+        display: $display-settings;
+        align-items: center;
+        margin-bottom: 0.5%;
+    }
+
+    .footer-simple {
+        margin-right: 5%;
+        display: flex;
+        align-items: center;
+    }
+
+    .footer-simple p {
+        margin: 20px;
+    }
+
+    .footer-simple a {
+        text-decoration: none;
+        color: white;
+    }   
+
+    .footer-ordinateur {
+        display: block;
+    }
+
+    .footer-mobile {
+        display: none;
+    }
+
+}
 
 
