@@ -29,11 +29,10 @@ body {
     width: 100%;
     height: 100%;
     background-color: white;
-    display: flex;
+    display: $display-settings;
     justify-content: center;
     align-items: center;
-    z-index: 9999;
-    animation: fadeOutBackground 3s 3s forwards; /* Animation pour le fond blanc */
+    animation: fadeOutBackground 3s 3s forwards; 
 }
   
   .loader {
@@ -42,7 +41,7 @@ body {
     border-top: 16px solid $couleur_primaire;
     width: 120px;
     height: 120px;
-    animation: spin 1s linear infinite, fadeOutLoader 1s 3s forwards; /* Deux animations pour le loader */
+    animation: spin 1s linear infinite, fadeOutLoader 1s 3s forwards; 
 }
   
   @keyframes spin {
@@ -179,12 +178,12 @@ body {
     margin-top: 10px;
     box-shadow: $ombre_fonctionnement;
     .fa-solid.fa-mobile-screen-button {
-       margin-top: $hauteur_du_logo;
-       padding-left: $espace_du_texte;
-       font-size: $taille_icon;
-       color: $couleur_icon;
-       &:hover {
-          color: $couleur_primaire
+        margin-top: $hauteur_du_logo;
+        padding-left: $espace_du_texte;
+        font-size: $taille_icon;
+        color: $couleur_icon;
+        &:hover {
+           color: $couleur_primaire
         }
     }    
 }
@@ -276,7 +275,7 @@ body {
 }
 
 .fa-regular.fa-heart {
-    font-size: 30px;
+    font-size: 25px;
     top: 17%;
     position: absolute;
     right: 5%;
@@ -289,7 +288,7 @@ body {
 }
 
 .fa-solid.fa-heart {
-    font-size: 30px;
+    font-size: 25px;
     top: 17%;
     position: absolute;
     right: 5%;
@@ -402,16 +401,49 @@ body {
     margin-left: 3%;
     margin-bottom: 10px;
     opacity: 0;
-    animation: fadeInCascade 1s ease-in-out forwards;
+    animation: fadeInCascade 1s forwards;
     .card-menu {
         background: white;
-        margin:35px 5px;
+        margin: 35px 5px;
         padding: $espace_entre_couleur_texte;
         width: $largeur_couleur_arriere;
         border-radius: $border_texte_fonctionnement;
         margin-top: 10px;
         box-shadow: $ombre_fonctionnement;
+        overflow: hidden;
+        position: relative; 
     }
+}
+
+
+.check {
+    border-radius: 0px 20px 20px 0px;
+    width: 12%;
+    position: absolute;
+    top: 0%; 
+    right: -12%;
+    background-color: rgb(153, 226, 208);
+    height: 139px;
+}
+
+.fa-solid.fa-circle-check {
+    font-size: 5vw;
+    margin-left: 25%;
+    margin-top: 50%; 
+    color: white;
+}
+
+.prix-menu {
+    transition: margin-right 0.3s ease; 
+}
+
+.card-menu:hover .prix-menu {
+    margin-right: 12%;
+}
+
+.card-menu:hover .check {
+    right: 0%;
+    transition: margin-right 0.3s ease;
 }
 
 .card-menu h4 {
@@ -420,18 +452,16 @@ body {
     margin-top: 0; 
 }
 
-.article-menu:nth-child(1) {
-    animation-delay: 0.5s; 
-}
-  
 .article-menu:nth-child(2) {
+    animation-delay: 0,5s; 
+}
+.article-menu:nth-child(3) {
     animation-delay: 1s; 
 }
-  
-.article-menu:nth-child(3) {
-    animation-delay: 1.5s;
+.article-menu:nth-child(4) {
+    animation-delay: 2s; 
 }
-
+  
   @keyframes fadeInCascade {
     0% {
       opacity: 0;
@@ -646,12 +676,14 @@ body {
         font-weight: $texte_gras;
         box-shadow: $ombre_fonctionnement;
         width: 24vw;
-        .texte_fonctionnement .fa-solid.fa-mobile-screen-button {
+        .fa-solid.fa-mobile-screen-button {
             font-size: 2vw;
             padding-left: 25px;
             margin-top: 4%;
         }
     }
+
+  
 
     .fa-solid.fa-list-ul {
         font-size: 2vw;
@@ -697,17 +729,17 @@ body {
         text-decoration: none;  
         .card-img {
             height: 200px;
-            width: 35.8vw;
+            width: 36.8vw;
             border-radius: 20px 20px 0px 0px;
             object-fit: cover;
-            margin-left: 5%;
+            margin-left: 4%;
         }  
     }
         
     .taille-card {
         position: relative;
         border-radius: 0px 0px 20px 20px;
-        margin-left: 2%;
+        margin-left: 4%;
         width: 37vw;
         height: 100px;
         display: flex;
@@ -725,10 +757,10 @@ body {
 
     .header-menu a {
         margin-right: 27%;
-          .fa-solid.fa-arrow-left {
+        .fa-solid.fa-arrow-left {
             font-size: 3vw;
-          }
-      }
+        }
+    }
 
     .logo-menu {
         margin-right: 34%;
@@ -810,7 +842,6 @@ body {
         margin-top: 0;
     }  
     
-
     .nom-menu {
         display: flex;
         justify-content: space-between;
@@ -847,8 +878,8 @@ body {
 
     .fa-solid.fa-circle-check {
         font-size: 2.5vw;
-        margin-left: 28%;
-        margin-top: 45%;
+        margin-left: 30%;
+        margin-top: 37%;
         color: white;
         overflow: hidden;
     }
@@ -915,7 +946,6 @@ body {
     .footer-mobile {
         display: none;
     }
-
 }
 
 
