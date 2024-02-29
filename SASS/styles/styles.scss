@@ -126,7 +126,8 @@ body {
     margin-left: 29%;
     border: $sans_bordure;
     box-shadow: $ombre_fonctionnement;  
-    &:hover {
+    &:hover,
+    &:active {
         background: linear-gradient(to bottom, #e69fcf, #e06dcf, #cc61d0); 
         box-shadow: $ombre_hover;
     }
@@ -178,6 +179,7 @@ body {
         padding-left: $espace_du_texte;
         font-size: $taille_icon;
         color: $couleur_icon;
+        &:hover,
         &:active {
            color: $couleur_primaire
         }
@@ -189,6 +191,7 @@ body {
     padding-left: $espace_du_texte;
     font-size: $taille_icon;
     color: $couleur_icon;
+    &:hover,
     &:active {
         color: $couleur_primaire
     }
@@ -199,6 +202,7 @@ body {
     padding-left: $espace_du_texte;
     font-size: $taille_icon;
     color: $couleur_icon;
+    &:hover,
     &:active {
         color: $couleur_primaire
     }
@@ -278,7 +282,8 @@ body {
     transition: opacity 0.3s ease;
     opacity: $coeur_voyant;
     color: black;
-    &:hover {
+    &:hover,
+    &:active {
         opacity: $coeur_disparait
     }
 }
@@ -293,6 +298,7 @@ body {
     opacity: $coeur_disparait;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    &:hover,
     &:active {
         opacity: $coeur_voyant;
     }
@@ -359,6 +365,7 @@ body {
     top: 11vw;
     transition: opacity 0.3s ease;
     opacity: $coeur_voyant;
+    &:hover,
     &:active {
         opacity: $coeur_disparait
     }
@@ -371,6 +378,7 @@ body {
     top: 11vw;
     transition: opacity 0.3s ease;
     opacity: $coeur_disparait;
+    &:hover,
     &:active {
         opacity: $coeur_voyant;
     }
@@ -411,7 +419,6 @@ body {
     }
 }
 
-
 .check {
     border-radius: 0px 20px 20px 0px;
     width: 12%;
@@ -434,11 +441,11 @@ body {
     transition: margin-right 0.3s ease; 
 }
 
-.card-menu:active .prix-menu {
+.card-menu:hover .prix-menu {
     margin-right: 12%;
 }
 
-.card-menu:active .check {
+.card-menu:hover .check {
     right: -0%;
 }
 
@@ -498,7 +505,8 @@ body {
     margin-left: 29%;
     border: $sans_bordure;
     box-shadow: $ombre_fonctionnement;
-    &:hover {
+    &:hover,
+    &:active {
         background: linear-gradient(to bottom, #e69fcf, #e06dcf, #cc61d0); 
         box-shadow: $ombre_hover;
     }
