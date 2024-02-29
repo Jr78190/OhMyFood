@@ -169,7 +169,7 @@ body {
   font-size: 4vw;
   color: #7e7e7e;
 }
-.texte_fonctionnement .fa-solid.fa-mobile-screen-button:hover {
+.texte_fonctionnement .fa-solid.fa-mobile-screen-button:active {
   color: #9356DC;
 }
 
@@ -179,7 +179,7 @@ body {
   font-size: 4vw;
   color: #7e7e7e;
 }
-.fa-solid.fa-list-ul:hover {
+.fa-solid.fa-list-ul:active {
   color: #9356DC;
 }
 
@@ -189,7 +189,7 @@ body {
   font-size: 4vw;
   color: #7e7e7e;
 }
-.fa-solid.fa-store:hover {
+.fa-solid.fa-store:active {
   color: #9356DC;
 }
 
@@ -280,7 +280,7 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.fa-solid.fa-heart:hover {
+.fa-solid.fa-heart:active {
   opacity: 1;
 }
 
@@ -344,7 +344,7 @@ body {
   transition: opacity 0.3s ease;
   opacity: 1;
 }
-.fa-regular.fa-heart.menu:hover {
+.fa-regular.fa-heart.menu:active {
   opacity: 0;
 }
 
@@ -356,7 +356,7 @@ body {
   transition: opacity 0.3s ease;
   opacity: 0;
 }
-.fa-solid.fa-heart.menu:hover {
+.fa-solid.fa-heart.menu:active {
   opacity: 1;
 }
 
@@ -403,6 +403,7 @@ body {
   right: -12%;
   background-color: rgb(153, 226, 208);
   height: 139px;
+  transition: right 0.3s ease;
 }
 
 .fa-solid.fa-circle-check {
@@ -416,13 +417,12 @@ body {
   transition: margin-right 0.3s ease;
 }
 
-.card-menu:hover .prix-menu {
+.card-menu:active .prix-menu {
   margin-right: 12%;
 }
 
-.card-menu:hover .check {
+.card-menu:active .check {
   right: 0%;
-  transition: margin-right 0.3s ease;
 }
 
 .card-menu h4 {
@@ -460,6 +460,13 @@ body {
 .nom-menu .subtitle-menu {
   margin: 0;
   font-size: 3.5vw;
+}
+
+.subtitle-menu:active {
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 80%;
+  text-overflow: ellipsis;
 }
 
 .btn-commander {
@@ -787,7 +794,7 @@ body {
     font-size: 1.5vw;
   }
   .prix-menu {
-    transition: margin-right 0, 3s ease;
+    transition: margin-right 0.3s ease;
   }
   .card-menu:hover .prix-menu {
     margin-right: 12%;
@@ -800,10 +807,11 @@ body {
     right: -12%;
     background-color: rgb(153, 226, 208);
     height: 150px;
+    transition: right 0.3s ease;
   }
   .card-menu:hover .check {
     right: 0%;
-    transition: margin-right 0, 3s ease;
+    transition: right 0.3s ease;
   }
   .fa-solid.fa-circle-check {
     font-size: 2.5vw;
