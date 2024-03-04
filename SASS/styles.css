@@ -417,11 +417,13 @@ body {
   transition: margin-right 0.3s ease;
 }
 
-.card-menu:hover .prix-menu {
+.card-menu:hover .prix-menu,
+.card-menu:active .prix-menu {
   margin-right: 12%;
 }
 
-.card-menu:hover .check {
+.card-menu:hover .check,
+.card-menu:active .check {
   right: 0%;
 }
 
@@ -462,7 +464,8 @@ body {
   font-size: 3.5vw;
 }
 
-.subtitle-menu:active {
+.card-menu:hover .subtitle-menu,
+.card-menu:active .subtitle-menu {
   white-space: nowrap;
   overflow: hidden;
   max-width: 80%;

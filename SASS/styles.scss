@@ -416,6 +416,7 @@ body {
         box-shadow: $ombre_fonctionnement;
         overflow: hidden;
         position: relative; 
+
     }
 }
 
@@ -441,13 +442,16 @@ body {
     transition: margin-right 0.3s ease; 
 }
 
-.card-menu:hover .prix-menu {
+.card-menu:hover .prix-menu,
+.card-menu:active .prix-menu {
     margin-right: 12%;
 }
 
-.card-menu:hover .check {
+.card-menu:hover .check,
+.card-menu:active .check {
     right: -0%;
 }
+
 
 .card-menu h4 {
     margin-bottom: 5px; 
@@ -485,12 +489,13 @@ body {
     }
 }
 
-.subtitle-menu:active {
+.card-menu:hover .subtitle-menu, 
+.card-menu:active .subtitle-menu {
     white-space: nowrap;
-        overflow: hidden;
-        max-width: 80%;
-        text-overflow: ellipsis;
-}
+    overflow: hidden;
+    max-width: 80%;
+    text-overflow: ellipsis;
+ }
   
 .btn-commander {
     background: $couleur_boutton;
